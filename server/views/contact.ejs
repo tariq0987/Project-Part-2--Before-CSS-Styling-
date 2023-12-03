@@ -1,0 +1,54 @@
+<%- include('partials/header', { title: 'Contact' }) %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <style>
+    .submit-button {
+        background-color: rgba(38, 38, 38, 0.5) !important; /* Sets the button's background color to black */
+        /* Add any additional styling as needed */
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="sticky-footer-wrapper">
+        <div class="sticky-footer-content">
+            <article>
+                <h1>
+                    <center>Contact Below!</center>
+                </h1>
+            </article>
+
+            <article>
+                <form action="/send" method="post" name="send_message" class="contact-form">
+                    <div>
+                        <label for="name"><b>Name:</b></label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email"><b>Email:</b></label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div>
+                        <label for="comments"><b>Comments:</b></label>
+                        <textarea name="comments" id="comments" placeholder="Your Message" cols="60" rows="12" required></textarea>
+                    </div>
+                    <div style="display: none;">
+                        <input type="hidden" name="securityCheck" value="4">
+                    </div>
+                    <div> 
+                        <button type="submit" class="submit-button">Send</button>
+                    </div>
+                </form>
+            </article>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<%- include('partials/footer') %>

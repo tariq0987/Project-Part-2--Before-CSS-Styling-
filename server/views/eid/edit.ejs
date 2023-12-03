@@ -1,0 +1,54 @@
+<%- include('../partials/header.ejs') %>
+
+<!-- Content for the Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1 class="text-center"><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="itemTextField">Item</label>
+                    <input type="text" class="form-control"
+                    id="itemTextField"
+                    placeholder="Enter the gift that you want to edit"
+                    name="Item" 
+                    value="<%= gift.Item %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amountTextField">Amount</label>
+                    <input type="text" class="form-control"
+                    id="amountTextField"
+                    placeholder="Enter the amount of gifts that you want to edit"
+                    name="Amount" 
+                    value="<%= gift.Amount %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">Price</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Enter the price of the that you want to edit"
+                    name="Price" 
+                    value="<%= gift.Price %>"
+                    required>
+                </div>
+
+                <div class="form-group text-center mt-3"> <!-- Centered and with margin -->
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-edit"></i> Submit</button>
+                
+                        <a href="/eidgiftlist" class="btn btn-warning">
+                            <i class="fas fa-times"></i> Cancel</a>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div> 
+
+<%- include('../partials/footer.ejs') %>

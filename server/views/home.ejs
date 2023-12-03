@@ -1,0 +1,91 @@
+<%- include('partials/header', { title: 'Home' }) %>
+
+
+<div class="sticky-footer-wrapper">
+    <div class="sticky-footer-content">
+        <article>
+            <h1>
+                <center>Welcome to Eid Gift Ideas</center>
+            </h1>
+        </article>
+
+<section id="gifts_pic" class="slideshow-container">
+    <img class="mySlides" src="/assets/images/2110406-708948199.jpg" alt="My Picture 2">
+    <img class="mySlides" src="/assets/images/shutterstock_144631775.jpg" alt="My Picture 3">
+</section>
+
+
+        <section id="gifts">
+            <p>Explore a curated collection of gifts that will bring joy to your loved ones this Eid.</p>
+            <p>From thoughtful presents for family members to unique items for friends, find the perfect gift to celebrate this special occasion.</p>
+            <p>Whether it's traditional items, handmade crafts, or modern gadgets, discover a range of options that reflect the spirit of Eid.</p>
+            <!-- Add images or descriptions of a few featured gifts -->
+        </section>
+        
+        
+</div>
+
+<style>
+
+
+    h1 {
+            text-align: center;
+            padding-top: 100px; /* Adding padding at the top */
+            font-weight: bold; /* Applying bold font */
+            font-family: Arial, sans-serif; /* Optional: changing font-family */
+        }
+   #gifts_pic {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add space between images */
+}
+
+#gifts_pic img {
+    width: 300px; /* Set a specific width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle drop shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition effect */
+
+    /* Additional styling for hover effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add hover effect for images */
+#gifts_pic img:hover {
+    transform: translateY(-5px); /* Move image up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance drop shadow on hover */
+}
+
+
+
+section {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    line-height: 1; /* Decreased line height */
+    color: #333;
+    opacity: 0; /* Initially set the opacity to 0 */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start from opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade in to opacity 1 */
+    }
+}
+
+
+    
+
+
+
+
+
+</style>
+
+<%- include('partials/footer') %>
